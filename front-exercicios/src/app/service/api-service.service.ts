@@ -37,6 +37,6 @@ export class ApiService {
   getCalcularFatorial(numero: number){
     let params = new HttpParams()
         .set('numero', numero)
-    return this.http.get(`${environment.apiUrl}/exercicio3/calcularFatorial`, {params: params})
+    return this.http.get(`${environment.apiUrl}/exercicio3/calcularFatorial`, {params: params,responseType:'text'})
   }
 }

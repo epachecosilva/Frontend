@@ -28,7 +28,7 @@ const routes: Routes = [
   {
       path: 'exercicio3',
       component: Exercicio3Component
-    }
+  }
 ];
 
 
