@@ -39,4 +39,9 @@ export class ApiService {
         .set('numero', numero)
     return this.http.get(`${environment.apiUrl}/exercicio3/calcularFatorial`, {params: params,responseType:'text'})
   }
+  getSomarMultiplos(numero: number){
+    let params = new HttpParams()
+        .set('numero', numero)
+    return this.http.get(`${environment.apiUrl}/exercicio4/calcularSomaMultiplos`, {params: params})
+  }
 }

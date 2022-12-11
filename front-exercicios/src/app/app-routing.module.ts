@@ -6,6 +6,7 @@ import { VeiculosComponent } from './component/veiculos/veiculos.component';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule, Routes } from '@angular/router';
+import { Exercicio4Component } from './component/exercicio4/exercicio4.component';
 
 
 const routes: Routes = [
@@ -26,8 +27,12 @@ const routes: Routes = [
     component: Exercicio2Component
   },
   {
-      path: 'exercicio3',
-      component: Exercicio3Component
+    path: 'exercicio3',
+    component: Exercicio3Component
+  },
+  {
+    path: 'exercicio4',
+    component: Exercicio4Component
   }
 ];
 
