@@ -8,6 +8,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { VeiculosComponent } from './component/veiculos/veiculos.component';
 import { MenuComponent } from './component/menu/menu.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { NgxMaskModule, IConfig } from 'ngx-mask'
 
 import {MatCardModule} from '@angular/material/card';
 import {MatInputModule} from '@angular/material/input';
@@ -18,6 +19,8 @@ import { Exercicio1Component } from './component/exercicio1/exercicio1.component
 import { Exercicio2Component } from './component/exercicio2/exercicio2.component';
 import { Exercicio3Component } from './component/exercicio3/exercicio3.component';
 import {InputTextModule} from 'primeng/inputtext';
+
+export const options: Partial<null|IConfig> | (() => Partial<IConfig>) = null;
 
 @NgModule({
   declarations: [
@@ -38,7 +41,8 @@ import {InputTextModule} from 'primeng/inputtext';
     ButtonModule,
     InputTextModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    NgxMaskModule.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent]

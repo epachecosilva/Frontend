@@ -5,10 +5,10 @@
   <mat-card style="width: 50%; left: 25%;">
     <div class="form form-group">
       <label> Vetor a ser Ordenado </label>
-      <input [(ngModel)]="vetor"  class="form-control" id="vetor" placeholder="Informe o vetor a ser Ordenado">
+      <input type="text" [dropSpecialCharacters]="false" mask="0,0,0,0,0,0,0,0"  [(ngModel)]="vetor"  class="form-control" id="vetor" placeholder="Informe o vetor a ser Ordenado">
     </div>
     <div class="buttons row">
-      <div class="col-md-4" align="center">
+      <div  align="center">
         <button (click)="ordenarVetor()"pButton pRipple type="button" label="Ordenar Vetor" class="p-button-raised  p-button-secondary"></button>
       </div>
     </div>

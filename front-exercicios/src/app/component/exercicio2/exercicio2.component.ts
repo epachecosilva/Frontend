@@ -8,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class Exercicio2Component implements OnInit {
 
-  vetor: [5,3,2,4,7,1,0,6];
+  vetor: string = "5,3,2,4,7,1,0,6";
 
   resultado?: string;
 
@@ -21,7 +21,7 @@ export class Exercicio2Component implements OnInit {
   }
   ordenarVetor(){
       this.apiService.getOrdenarVetor(this.vetor).subscribe((resultado: any) => {
-          this.resultado = resultado + '% de votos válidos';
+          this.resultado = resultado;
       })
     }
 }

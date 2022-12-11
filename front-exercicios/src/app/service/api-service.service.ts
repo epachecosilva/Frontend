@@ -29,7 +29,7 @@ export class ApiService {
         .set('nulos', nulos)
     return this.http.get(`${environment.apiUrl}/exercicio1/votosNulos`, {params: params})
   }
-  getOrdenarVetor(vetor: []){
+  getOrdenarVetor(vetor: string){
     let params = new HttpParams()
         .set('vetor', vetor)
     return this.http.get(`${environment.apiUrl}/exercicio2/ordenarVetor`, {params: params})
