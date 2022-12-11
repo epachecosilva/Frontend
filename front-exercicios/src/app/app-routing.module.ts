@@ -1,4 +1,6 @@
 import { Exercicio1Component } from './component/exercicio1/exercicio1.component';
+import { Exercicio2Component } from './component/exercicio2/exercicio2.component';
+import { Exercicio3Component } from './component/exercicio3/exercicio3.component';
 import { MenuComponent } from './component/menu/menu.component';
 import { VeiculosComponent } from './component/veiculos/veiculos.component';
 import { NgModule } from '@angular/core';
@@ -18,7 +20,15 @@ const routes: Routes = [
   {
     path: 'exercicio1',
     component: Exercicio1Component
-  }
+  },
+  {
+    path: 'exercicio2',
+    component: Exercicio2Component
+  },
+  {
+      path: 'exercicio3',
+      component: Exercicio3Component
+    }
 ];
 
 

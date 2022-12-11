@@ -15,6 +15,8 @@ import {MatInputModule} from '@angular/material/input';
 import {AccordionModule} from 'primeng/accordion';
 import {ButtonModule} from 'primeng/button';
 import { Exercicio1Component } from './component/exercicio1/exercicio1.component';
+import { Exercicio2Component } from './component/exercicio2/exercicio2.component';
+import { Exercicio3Component } from './component/exercicio3/exercicio3.component';
 import {InputTextModule} from 'primeng/inputtext';
 
 @NgModule({
@@ -22,7 +24,9 @@ import {InputTextModule} from 'primeng/inputtext';
     AppComponent,
     VeiculosComponent,
     MenuComponent,
-    Exercicio1Component
+    Exercicio1Component,
+    Exercicio2Component,
+    Exercicio3Component
   ],
   imports: [
     BrowserModule,

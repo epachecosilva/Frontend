@@ -29,5 +29,14 @@ export class ApiService {
         .set('nulos', nulos)
     return this.http.get(`${environment.apiUrl}/exercicio1/votosNulos`, {params: params})
   }
-
+  getOrdenarVetor(vetor: []){
+    let params = new HttpParams()
+        .set('vetor', vetor)
+    return this.http.get(`${environment.apiUrl}/exercicio2/ordenarVetor`, {params: params})
+  }
+  getCalcularFatorial(numero: number){
+    let params = new HttpParams()
+        .set('numero', numero)
+    return this.http.get(`${environment.apiUrl}/exercicio3/calcularFatorial`, {params: params})
+  }
 }
