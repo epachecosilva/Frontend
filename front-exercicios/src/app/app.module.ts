@@ -22,6 +22,7 @@ import { Exercicio4Component } from './component/exercicio4/exercicio4.component
 import { Exercicio5Component } from './component/exercicio5/exercicio5.component';
 import {DropdownModule} from 'primeng/dropdown';
 import {TableModule} from 'primeng/table';
+import {CheckboxModule} from 'primeng/checkbox';
 
 export const options: Partial<null|IConfig> | (() => Partial<IConfig>) = null;
 
@@ -49,7 +50,9 @@ export const options: Partial<null|IConfig> | (() => Partial<IConfig>) = null;
     NgxMaskModule.forRoot(),
     ReactiveFormsModule,
     TableModule,
-    DropdownModule
+    DropdownModule,
+    CheckboxModule
+
 
   ],
   providers: [],
