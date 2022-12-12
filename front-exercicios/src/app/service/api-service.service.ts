@@ -1,6 +1,6 @@
 import { environment } from './../../environments/environment';
 import { Injectable } from '@angular/core';
-import {HttpClient, HttpParams} from "@angular/common/http";
+import {HttpClient, HttpHeaders, HttpParams} from "@angular/common/http";
 
 @Injectable({
   providedIn: 'root'
@@ -44,4 +44,25 @@ export class ApiService {
         .set('numero', numero)
     return this.http.get(`${environment.apiUrl}/exercicio4/calcularSomaMultiplos`, {params: params})
   }
+ 
+  setVeiculo(veiculo: any){
+    const headers = new HttpHeaders({'Content-Type':'application/json; charset=utf-8'});
+    let veiculoJSON = JSON.parse(JSON.stringify(veiculo));
+    return this.http.post(`${environment.apiUrl}/veiculos`, veiculoJSON, {headers});
+  }
+
+  getVeiculos(){
+    return this.http.get(`${environment.apiUrl}/veiculos`);
+  }
+
+  atualizaVeiculo(veiculo: any, id: number){
+    const headers = new HttpHeaders({'Content-Type':'application/json; charset=utf-8'});
+    let veiculoJSON = JSON.parse(JSON.stringify(veiculo));
+    return this.http.put(`${environment.apiUrl}/veiculos/${id}`, veiculoJSON, {headers})
+  }
+
+  deletaVeiculo(id: number){
+    return this.http.delete(`${environment.apiUrl}/veiculos/${id}`);
+  }
+
 }

@@ -1,11 +1,10 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import {HttpClientModule} from "@angular/common/http";
 
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
-import { VeiculosComponent } from './component/veiculos/veiculos.component';
 import { MenuComponent } from './component/menu/menu.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgxMaskModule, IConfig } from 'ngx-mask'
@@ -20,18 +19,21 @@ import { Exercicio2Component } from './component/exercicio2/exercicio2.component
 import { Exercicio3Component } from './component/exercicio3/exercicio3.component';
 import {InputTextModule} from 'primeng/inputtext';
 import { Exercicio4Component } from './component/exercicio4/exercicio4.component';
+import { Exercicio5Component } from './component/exercicio5/exercicio5.component';
+import {DropdownModule} from 'primeng/dropdown';
+import {TableModule} from 'primeng/table';
 
 export const options: Partial<null|IConfig> | (() => Partial<IConfig>) = null;
 
 @NgModule({
   declarations: [
     AppComponent,
-    VeiculosComponent,
     MenuComponent,
     Exercicio1Component,
     Exercicio2Component,
     Exercicio3Component,
-    Exercicio4Component
+    Exercicio4Component,
+    Exercicio5Component
   ],
   imports: [
     BrowserModule,
@@ -44,7 +46,11 @@ export const options: Partial<null|IConfig> | (() => Partial<IConfig>) = null;
     InputTextModule,
     FormsModule,
     HttpClientModule,
-    NgxMaskModule.forRoot()
+    NgxMaskModule.forRoot(),
+    ReactiveFormsModule,
+    TableModule,
+    DropdownModule
+
   ],
   providers: [],
   bootstrap: [AppComponent]

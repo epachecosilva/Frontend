@@ -2,17 +2,17 @@ import { Exercicio1Component } from './component/exercicio1/exercicio1.component
 import { Exercicio2Component } from './component/exercicio2/exercicio2.component';
 import { Exercicio3Component } from './component/exercicio3/exercicio3.component';
 import { MenuComponent } from './component/menu/menu.component';
-import { VeiculosComponent } from './component/veiculos/veiculos.component';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule, Routes } from '@angular/router';
 import { Exercicio4Component } from './component/exercicio4/exercicio4.component';
+import { Exercicio5Component } from './component/exercicio5/exercicio5.component';
 
 
 const routes: Routes = [
   {
     path: 'exercicio5',
-    component: VeiculosComponent
+    component: Exercicio5Component
   },
   {
     path: '',
@@ -33,7 +33,8 @@ const routes: Routes = [
   {
     path: 'exercicio4',
     component: Exercicio4Component
-  }
+  },
+  
 ];
 
 
